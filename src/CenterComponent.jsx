@@ -11,6 +11,8 @@ function CenterComponent() {
         studentName:"",
         studentBranch:""
     })
+    let [token,setToke]=useState("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mbyI6eyJkbiI6InVpZD0yMjExMzAxMjcwLG91PXN0dWRlbnRzLGRjPW1hbml0LGRjPWFjLGRjPWluIiwiY29udHJvbHMiOltdLCJvYmplY3RDbGFzcyI6WyJpbmV0T3JnUGVyc29uIiwic2hhZG93QWNjb3VudCIsInBvc2l4QWNjb3VudCJdLCJzbiI6IlZFTktBVEEiLCJnaXZlbk5hbWUiOiJNIiwib3UiOiJCLlRlY2giLCJwb3N0YWxBZGRyZXNzIjoiMi0yNTAsTUFSS0VUIFNUUkVFVCxHRU9SR0VQRVRBLEFOREhSQSBQUkFERVNIIiwibW9iaWxlIjoiOTc1NzQ3NDA2OSIsIm1haWwiOiJtYWRlbWFkaXR5YTMwMDdAZ21haWwuY29tIiwic2hhZG93TGFzdENoYW5nZSI6IjE5MzEzIiwiZ2lkTnVtYmVyIjoiMTAwMDAiLCJnZWNvcyI6Ik0gVkVOS0FUQSIsImxvZ2luU2hlbGwiOiIvYmluL2Jhc2giLCJjbiI6Ik0gVkVOS0FUQSIsInVpZE51bWJlciI6IjIzMTAxIiwiZGVwYXJ0bWVudE51bWJlciI6IkVsZWN0cmljYWwgRW5naW5lZXJpbmciLCJlbXBsb3llZVR5cGUiOiJTdHVkZW50IiwidWlkIjoiMjIxMTMwMTI3MCIsImhvbWVEaXJlY3RvcnkiOiIvaG9tZS8yMjExMzAxMjcwIiwiZW1wbG95ZWVOdW1iZXIiOiIyMjExMzAxMjcwIiwidXNlclBhc3N3b3JkIjoie1NTSEF9NXo3SWsvcmd6VFYyTTlybEVocko5MHM4ODBtaGdEZXciLCJzdHVkZW50SW5mbyI6W3sicGhvbmVfbm8iOiI5NzU3NDc0MDY5Iiwic3R1ZGVudHVpZCI6MzU1OSwiZnVsbF9uYW1lIjoiTSBWRU5LQVRBIEFESVRZQSBQUkFLQVNIIiwicm9sbF9ubyI6IjIyMTEzMDEyNzAiLCJkb2IiOiIzMC83LzIwMDQiLCJwaG9uZV9udW1iZXIiOiI5NzU3NDc0MDY5IiwiaW5zdGl0dXRlX2VtYWlsX2lkIjoibWFkZW1hZGl0eWEzMDA3QGdtYWlsLmNvbSIsImFjY291bnRzX3BheW1lbnRfdHlwZV9pZCI6OCwic3RhcnRfc2Vzc2lvbiI6MjAyMiwicHJvZ3JhbV9tYXN0ZXJfaWQiOjczLCJwcm9ncmFtX3R5cGVfaWRfY29kZSI6MjcsImNvZGUiOiJCLlRlY2giLCJjb2RlX2Rlc2MiOiJCYWNoZWxvciBvZiBUZWNobm9sb2d5IiwicGF5bWVudF90eXBlIjoiR0VOL09CQy0gSW5jb21lIEJldHdlZW4gMSB0byA1IExha2giLCJob3N0ZWwiOiJINS1CMjQyIn1dLCJzZW1lc3Rlcl90ZXJtIjp7InN0dWRlbnR1aWQiOjM1NTksInNlbWVzdGVyX3JlZ19jb21wbGV0aW9uX3N0YXR1cyI6IlIiLCJzZW1lc3Rlcl90ZXJtX25vX2lkX2NvZGUiOjgsInN0YXJ0X3Nlc3Npb24iOjIwMjIsInByb2dyYW1fbWFzdGVyX2lkIjo3NSwidmVyc2lvbiI6MSwiY3VycmljdWx1bV9zdGFydF9zZXNzaW9uIjoyMDIxLCJzdGFydF9zZW1lc3Rlcl90eXBlX2lkX2NvZGUiOjIsInNlc3Npb24iOjIwMjQsInNjaGVkdWxlX3R5cGVfdmFsdWUiOiIyIiwiY29kZV9kZXNjIjoiU2VtZXN0ZXIgNSIsInJlZ2lzdHJhdGlvbiI6IkNvbmZpcm1lZCIsImRlcHRfaWQiOjMsInByb2dyYW1fbmFtZSI6IkIuVGVjaC4gaW4gRWxlY3RyaWNhbCBFbmdpbmVlcmluZyIsImRlZ3JlZV9sZXZlbF9pZF9jb2RlIjoyOCwicHJvZ3JhbV90eXBlX2lkX2NvZGUiOjI3fSwic3ViamVjdHMiOltdLCJwcm9ncmFtIjpbeyJwcm9ncmFtX21hc3Rlcl9pZCI6NzUsInByb2dyYW1fbmFtZSI6IkIuVGVjaC4gaW4gRWxlY3RyaWNhbCBFbmdpbmVlcmluZyIsInN0YXJ0X3Nlc3Npb24iOjIwMjEsImRlZ3JlZV9sZXZlbF9pZF9jb2RlIjoyOCwicHJvZ3JhbV90eXBlX2lkX2NvZGUiOjI3fSx7InByb2dyYW1fbWFzdGVyX2lkIjo3NiwicHJvZ3JhbV9uYW1lIjoiTWlub3IgU3BlY2lhbGl6YXRpb24gaW4gQ29tcHV0ZXIgU2NpZW5jZSBFbmdpbmVlcmluZyIsInN0YXJ0X3Nlc3Npb24iOjIwMjIsImRlZ3JlZV9sZXZlbF9pZF9jb2RlIjo4MiwicHJvZ3JhbV90eXBlX2lkX2NvZGUiOjI3fV19LCJpYXQiOjE3MzYzMjU1NDQsImV4cCI6MTczNjQxMTk0NH0.jrHHfXXDBJ_PcdygdgryZgZ78EsnKCVxOrCI9qp_F9k");
+
     let [popupdata,setpopupdata]=useState([]);
     let [studentu,setstudentu]=useState('');
     // let [studentName,setStudentName]=useState('');
@@ -24,7 +26,7 @@ function CenterComponent() {
             
         },{
             headers:{
-                Authorization:"Bearer "+"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mbyI6eyJkbiI6InVpZD0yMjExMzAxMjcwLG91PXN0dWRlbnRzLGRjPW1hbml0LGRjPWFjLGRjPWluIiwiY29udHJvbHMiOltdLCJvYmplY3RDbGFzcyI6WyJpbmV0T3JnUGVyc29uIiwic2hhZG93QWNjb3VudCIsInBvc2l4QWNjb3VudCJdLCJzbiI6IlZFTktBVEEiLCJnaXZlbk5hbWUiOiJNIiwib3UiOiJCLlRlY2giLCJwb3N0YWxBZGRyZXNzIjoiMi0yNTAsTUFSS0VUIFNUUkVFVCxHRU9SR0VQRVRBLEFOREhSQSBQUkFERVNIIiwibW9iaWxlIjoiOTc1NzQ3NDA2OSIsIm1haWwiOiJtYWRlbWFkaXR5YTMwMDdAZ21haWwuY29tIiwic2hhZG93TGFzdENoYW5nZSI6IjE5MzEzIiwiZ2lkTnVtYmVyIjoiMTAwMDAiLCJnZWNvcyI6Ik0gVkVOS0FUQSIsImxvZ2luU2hlbGwiOiIvYmluL2Jhc2giLCJjbiI6Ik0gVkVOS0FUQSIsInVpZE51bWJlciI6IjIzMTAxIiwiZGVwYXJ0bWVudE51bWJlciI6IkVsZWN0cmljYWwgRW5naW5lZXJpbmciLCJlbXBsb3llZVR5cGUiOiJTdHVkZW50IiwidWlkIjoiMjIxMTMwMTI3MCIsImhvbWVEaXJlY3RvcnkiOiIvaG9tZS8yMjExMzAxMjcwIiwiZW1wbG95ZWVOdW1iZXIiOiIyMjExMzAxMjcwIiwidXNlclBhc3N3b3JkIjoie1NTSEF9NXo3SWsvcmd6VFYyTTlybEVocko5MHM4ODBtaGdEZXciLCJzdHVkZW50SW5mbyI6W3sicGhvbmVfbm8iOiI5NzU3NDc0MDY5Iiwic3R1ZGVudHVpZCI6MzU1OSwiZnVsbF9uYW1lIjoiTSBWRU5LQVRBIEFESVRZQSBQUkFLQVNIIiwicm9sbF9ubyI6IjIyMTEzMDEyNzAiLCJkb2IiOiIzMC83LzIwMDQiLCJwaG9uZV9udW1iZXIiOiI5NzU3NDc0MDY5IiwiaW5zdGl0dXRlX2VtYWlsX2lkIjoibWFkZW1hZGl0eWEzMDA3QGdtYWlsLmNvbSIsImFjY291bnRzX3BheW1lbnRfdHlwZV9pZCI6OCwic3RhcnRfc2Vzc2lvbiI6MjAyMiwicHJvZ3JhbV9tYXN0ZXJfaWQiOjczLCJwcm9ncmFtX3R5cGVfaWRfY29kZSI6MjcsImNvZGUiOiJCLlRlY2giLCJjb2RlX2Rlc2MiOiJCYWNoZWxvciBvZiBUZWNobm9sb2d5IiwicGF5bWVudF90eXBlIjoiR0VOL09CQy0gSW5jb21lIEJldHdlZW4gMSB0byA1IExha2giLCJob3N0ZWwiOiJINS1CMjQyIn1dLCJzZW1lc3Rlcl90ZXJtIjp7InN0dWRlbnR1aWQiOjM1NTksInNlbWVzdGVyX3JlZ19jb21wbGV0aW9uX3N0YXR1cyI6IlIiLCJzZW1lc3Rlcl90ZXJtX25vX2lkX2NvZGUiOjgsInN0YXJ0X3Nlc3Npb24iOjIwMjIsInByb2dyYW1fbWFzdGVyX2lkIjo3NSwidmVyc2lvbiI6MSwiY3VycmljdWx1bV9zdGFydF9zZXNzaW9uIjoyMDIxLCJzdGFydF9zZW1lc3Rlcl90eXBlX2lkX2NvZGUiOjIsInNlc3Npb24iOjIwMjQsInNjaGVkdWxlX3R5cGVfdmFsdWUiOiIyIiwiY29kZV9kZXNjIjoiU2VtZXN0ZXIgNSIsInJlZ2lzdHJhdGlvbiI6IkNvbmZpcm1lZCIsImRlcHRfaWQiOjMsInByb2dyYW1fbmFtZSI6IkIuVGVjaC4gaW4gRWxlY3RyaWNhbCBFbmdpbmVlcmluZyIsImRlZ3JlZV9sZXZlbF9pZF9jb2RlIjoyOCwicHJvZ3JhbV90eXBlX2lkX2NvZGUiOjI3fSwic3ViamVjdHMiOltdLCJwcm9ncmFtIjpbeyJwcm9ncmFtX21hc3Rlcl9pZCI6NzUsInByb2dyYW1fbmFtZSI6IkIuVGVjaC4gaW4gRWxlY3RyaWNhbCBFbmdpbmVlcmluZyIsInN0YXJ0X3Nlc3Npb24iOjIwMjEsImRlZ3JlZV9sZXZlbF9pZF9jb2RlIjoyOCwicHJvZ3JhbV90eXBlX2lkX2NvZGUiOjI3fSx7InByb2dyYW1fbWFzdGVyX2lkIjo3NiwicHJvZ3JhbV9uYW1lIjoiTWlub3IgU3BlY2lhbGl6YXRpb24gaW4gQ29tcHV0ZXIgU2NpZW5jZSBFbmdpbmVlcmluZyIsInN0YXJ0X3Nlc3Npb24iOjIwMjIsImRlZ3JlZV9sZXZlbF9pZF9jb2RlIjo4MiwicHJvZ3JhbV90eXBlX2lkX2NvZGUiOjI3fV19LCJpYXQiOjE3MzYzMjU1NDQsImV4cCI6MTczNjQxMTk0NH0.jrHHfXXDBJ_PcdygdgryZgZ78EsnKCVxOrCI9qp_F9k"
+                Authorization:"Bearer "+token
             }
         }).then(res=>{
             // console.log(res.data.data.Basic_Details[res.data.data.Basic_Details.length-1].full_name);
@@ -47,6 +49,20 @@ function CenterComponent() {
             
         }).catch(err=>{
             console.log(err)
+            if(err.status==403){
+
+                axios.post("https://erpapi.manit.ac.in/api/login",{
+                    "username":"2211301270",
+                    "password":"Diordel123"
+                }).then(res=>{
+                    setToke(res.data.token);
+
+
+                }).catch(err=>{
+                    console.log(err);
+                    
+                })
+            }
         }).finally(()=>{
             
 
